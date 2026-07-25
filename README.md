@@ -1,7 +1,7 @@
 # Case Study: A Compromised Website Serving an On-Chain Malware Loader (EtherHiding + ClickFix)
 
 **Date of discovery:** 25 July 2026
-**Target:** A live, legitimate small-business website (Joomla CMS) — **domain redacted**, since the site was still compromised and unpatched at time of writing. This is a real, ongoing business unrelated to the attack; the domain is withheld to avoid amplifying exposure or reputational harm to them while the compromise is unresolved.
+**Target:** A live, legitimate small-business website (Joomla CMS)  **domain redacted**, since the site was still compromised and unpatched at time of writing. This is a real, ongoing business unrelated to the attack; the domain is withheld to avoid amplifying exposure or reputational harm to them while the compromise is unresolved.
 **Status at time of writing:** Site compromised; report submitted to Google Safe Browsing; not yet flagged as of writing.
 
 ---
