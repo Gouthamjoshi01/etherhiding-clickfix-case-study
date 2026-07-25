@@ -8,7 +8,7 @@
 
 ## How this started
 
-This investigation began because my friend **Sofia** spotted something suspicious on her own laptop — a fake "verification" popup and a strange command window running in the background. Instead of clicking through it, she paused, recognized it didn't look right, and closed it before it could execute. She brought it to me, and that instinct to stop and question it is really what kicked off everything documented below. The technical analysis, deobfuscation, and reporting that follow are mine, but the catch itself was hers.
+This investigation began because my friend **Sofia Catherine** spotted something suspicious on her own laptop — a fake "verification" popup and a strange command window running in the background. Instead of clicking through it, she paused, recognized it didn't look right, and closed it before it could execute. She brought it to me, and that instinct to stop and question it is really what kicked off everything documented below. The technical analysis, deobfuscation, and reporting that follow are mine, but the catch itself was hers.
 
 ---
 
