@@ -129,10 +129,10 @@ The Windows Run dialog opened purely to illustrate step 1 of the attack for docu
 ## 8. Key Takeaways / Learning Points
 
 - **Compromised ≠ fake.** A completely legitimate, real business can have its real website hijacked the surrounding content being genuine doesn't mean the code is safe.
-- **Obfuscation is a smell, not proof by itself** — but combined with behavior (external calls, `eval`), it's a strong signal.
-- **On-chain payload hosting (EtherHiding)** is an emerging technique specifically chosen for takedown resistance — worth knowing as CMS-compromise campaigns increasingly adopt it.
-- **ClickFix** attacks succeed by exploiting user trust in "routine" verification steps — the victim technically executes the malware themselves, so no browser exploit is needed. Recognizing "no legitimate CAPTCHA ever asks you to open Run and paste something" is a critical defensive instinct.
-- **Automated reputation tools have latency and blind spots.** A "clean" Safe Browsing result is not proof of safety — it reflects the last crawl, which can be evaded or simply not yet have happened.
+- **Obfuscation is a smell, not proof by itself** but combined with behavior (external calls, `eval`), it's a strong signal.
+- **On-chain payload hosting (EtherHiding)** is an emerging technique specifically chosen for takedown resistance worth knowing as CMS-compromise campaigns increasingly adopt it.
+- **ClickFix** attacks succeed by exploiting user trust in "routine" verification steps the victim technically executes the malware themselves, so no browser exploit is needed. Recognizing "no legitimate CAPTCHA ever asks you to open Run and paste something" is a critical defensive instinct.
+- **Automated reputation tools have latency and blind spots.** A "clean" Safe Browsing result is not proof of safety it reflects the last crawl, which can be evaded or simply not yet have happened.
 
 ---
 
