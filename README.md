@@ -1,14 +1,14 @@
 # Case Study: A Compromised Website Serving an On-Chain Malware Loader (EtherHiding + ClickFix)
 
 **Date of discovery:** 25 July 2026
-**Target:** A live, legitimate small-business website (Joomla CMS)  **domain redacted**, since the site was still compromised and unpatched at time of writing. This is a real, ongoing business unrelated to the attack; the domain is withheld to avoid amplifying exposure or reputational harm to them while the compromise is unresolved.
+**Target:** A live, legitimate small-business website (Joomla CMS) — **domain redacted**, since the site was still compromised and unpatched at time of writing. This is a real, ongoing business unrelated to the attack; the domain is withheld to avoid amplifying exposure or reputational harm to them while the compromise is unresolved.
 **Status at time of writing:** Site compromised; report submitted to Google Safe Browsing; not yet flagged as of writing.
 
 ---
 
 ## How this started
 
-This investigation began because my friend **Sofia Catherine** spotted something suspicious on her own laptop a fake "verification" popup and a strange command window running in the background. Instead of clicking through it, she paused, recognized it didn't look right, and closed it before it could execute. She brought it to me, and that instinct to stop and question it is really what kicked off everything documented below. The technical analysis, deobfuscation, and reporting that follow are mine, but the catch itself was hers.
+This investigation began because my friend **Sofia** spotted something suspicious on her own laptop — a fake "verification" popup and a strange command window running in the background. Instead of clicking through it, she paused, recognized it didn't look right, and closed it before it could execute. She brought it to me, and that instinct to stop and question it is really what kicked off everything documented below. The technical analysis, deobfuscation, and reporting that follow are mine, but the catch itself was hers.
 
 ---
 
@@ -75,6 +75,8 @@ Independent of the loader above, the site (or a payload it triggers) displays a 
 2. In the verification window, press Ctrl+V
 3. Press Enter to finish
 
+**Trigger timing:** across repeated observations, the fake verification popup appeared within 1–2 seconds of the page loading, consistently, on every visit. This indicates the overlay is not behavior-gated (e.g., waiting for scroll depth, mouse movement, or an idle timer to filter out bots/crawlers) — it fires reliably for effectively every visitor to the homepage, increasing the likely exposure of the general public to this attack.
+
 This is the well-documented **ClickFix** technique:
 - The page silently writes a malicious command to the victim's clipboard (via JavaScript clipboard API or a hidden copy trigger) *before* showing this prompt.
 - The victim is told this is a normal, harmless anti-bot check.
@@ -128,11 +130,11 @@ The Windows Run dialog opened purely to illustrate step 1 of the attack for docu
 
 ## 8. Key Takeaways / Learning Points
 
-- **Compromised ≠ fake.** A completely legitimate, real business can have its real website hijacked the surrounding content being genuine doesn't mean the code is safe.
-- **Obfuscation is a smell, not proof by itself** but combined with behavior (external calls, `eval`), it's a strong signal.
-- **On-chain payload hosting (EtherHiding)** is an emerging technique specifically chosen for takedown resistance worth knowing as CMS-compromise campaigns increasingly adopt it.
-- **ClickFix** attacks succeed by exploiting user trust in "routine" verification steps the victim technically executes the malware themselves, so no browser exploit is needed. Recognizing "no legitimate CAPTCHA ever asks you to open Run and paste something" is a critical defensive instinct.
-- **Automated reputation tools have latency and blind spots.** A "clean" Safe Browsing result is not proof of safety it reflects the last crawl, which can be evaded or simply not yet have happened.
+- **Compromised ≠ fake.** A completely legitimate, real business can have its real website hijacked — the surrounding content being genuine doesn't mean the code is safe.
+- **Obfuscation is a smell, not proof by itself** — but combined with behavior (external calls, `eval`), it's a strong signal.
+- **On-chain payload hosting (EtherHiding)** is an emerging technique specifically chosen for takedown resistance — worth knowing as CMS-compromise campaigns increasingly adopt it.
+- **ClickFix** attacks succeed by exploiting user trust in "routine" verification steps — the victim technically executes the malware themselves, so no browser exploit is needed. Recognizing "no legitimate CAPTCHA ever asks you to open Run and paste something" is a critical defensive instinct.
+- **Automated reputation tools have latency and blind spots.** A "clean" Safe Browsing result is not proof of safety — it reflects the last crawl, which can be evaded or simply not yet have happened.
 
 ---
 
