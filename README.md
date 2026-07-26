@@ -1,14 +1,14 @@
 # Case Study: A Compromised Website Serving an On-Chain Malware Loader (EtherHiding + ClickFix)
 
 **Date of discovery:** 25 July 2026
-**Target:** A live, legitimate small-business website (Joomla CMS) — **domain redacted**, since the site was still compromised and unpatched at time of writing. This is a real, ongoing business unrelated to the attack; the domain is withheld to avoid amplifying exposure or reputational harm to them while the compromise is unresolved.
+**Target:** A live, legitimate small-business website (Joomla CMS) **domain redacted**, since the site was still compromised and unpatched at time of writing. This is a real, ongoing business unrelated to the attack; the domain is withheld to avoid amplifying exposure or reputational harm to them while the compromise is unresolved.
 **Status at time of writing:** Site compromised; report submitted to Google Safe Browsing; not yet flagged as of writing.
 
 ---
 
 ## How this started
 
-This investigation began because my friend **Sofia Catherine** spotted something suspicious on her own laptop — a fake "verification" popup and a strange command window running in the background. Instead of clicking through it, she paused, recognized it didn't look right, and closed it before it could execute. She brought it to me, and that instinct to stop and question it is really what kicked off everything documented below. The technical analysis, deobfuscation, and reporting that follow are mine, but the catch itself was hers.
+This investigation began because my friend **Sofia Catherine** spotted something suspicious on her own laptop a fake "verification" popup and a strange command window running in the background. Instead of clicking through it, she paused, recognized it didn't look right, and closed it before it could execute. She brought it to me, and that instinct to stop and question it is really what kicked off everything documented below. The technical analysis, deobfuscation, and reporting that follow are mine, but the catch itself was hers.
 
 ---
 
