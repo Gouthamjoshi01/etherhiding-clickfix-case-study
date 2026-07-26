@@ -54,7 +54,7 @@ The decoded script uses a **string-array + index-offset** obfuscation pattern (c
 - Function/variable names are replaced with meaningless hex-like identifiers.
 - Real function calls are resolved through lookup helper functions rather than being called directly.
 
-This doesn't change *what* the code does — it only slows down manual analysis and evades naive static signature scanning.
+This doesn't change *what* the code does it only slows down manual analysis and evades naive static signature scanning.
 
 ### 3.3 Payload retrieval (EtherHiding pattern)
 Once deobfuscated, the logic:
