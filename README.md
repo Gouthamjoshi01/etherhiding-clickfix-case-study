@@ -18,7 +18,7 @@ A legitimate, long-standing business website was compromised through injection o
 
 This combines two documented real-world techniques:
 - **EtherHiding** — using blockchain smart contract storage to host/serve malware payloads, making takedown very difficult since blockchain data is immutable and not hosted by a provider who can remove it.
-- **ClickFix** — a fake CAPTCHA/verification prompt that tricks a user into pressing Win+R, pasting a clipboard payload (silently set by the malicious page), and pressing Enter — executing a command the user never sees or types themselves.
+- **ClickFix** — a fake CAPTCHA/verification prompt that tricks a user into pressing Win+R, pasting a clipboard payload (silently set by the malicious page), and pressing Enter executing a command the user never sees or types themselves.
 
 ## 2. Timeline
 
